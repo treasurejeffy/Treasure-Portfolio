@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rokkitt:wght@500;600&display=swap');
+
+
+.section{
+    margin: 86px 0 80px;
+}
+
+.header h2{
+    font-family: 'Cinzel', serif;
+}
+
+.header p{
+    font-family: 'Rokkitt', serif;    
+}
+
+.Row{
+    border-left: 2px red solid;
+    padding: 0 10px 0;
+}
+
+.Row h5{
+    font-family: 'Rokkitt', serif;    
+}
+
+.Row article{
+    font-size: smaller;
+    letter-spacing: 1px;
+}
+
+.Row a{
+    font-family: 'Rokkitt', serif; 
+    font-size: 18px;   
+    padding: 0 10px 0;
+    color: black;
+}
+
+.Article{
+    font-family: 'Rokkitt', serif; 
+    color: black;
+}

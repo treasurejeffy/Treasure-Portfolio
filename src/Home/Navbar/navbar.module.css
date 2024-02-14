@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Rokkitt:wght@500;600&display=swap');
+
+.navs{
+    font-family: 'Rokkitt', serif;
+}
+
+.navHome{
+    color: red;
+}

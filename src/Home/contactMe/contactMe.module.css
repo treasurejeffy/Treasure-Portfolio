@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rokkitt:wght@500;600&display=swap');
+
+
+.contactHeader{
+    font-family: 'Cinzel', serif;
+}
+
+.contactHeader p{
+    font-family: 'Rokkitt', serif;
+}
+
+.contactForm{
+    font-family: 'Rokkitt', serif;
+}
+
+
+.contactMesocial{
+    padding: 51px 0 53px;
+}
+
+.contactMesocial h5{
+    font-family: 'Rokkitt', serif;
+}
+
+.notify{
+    font-family: 'Rokkitt', serif;
+}

@@ -1,0 +1,10 @@
+.footerSection{
+    margin: 100px 0 0;
+    padding: 50px 0 50px;
+    background-color: black;
+}
+
+.footerSection article{
+    font-size: small;
+    letter-spacing: 1px;
+}

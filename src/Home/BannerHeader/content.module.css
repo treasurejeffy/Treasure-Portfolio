@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Niconne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rokkitt:wght@500;600&display=swap');
+
+.banner{
+    height: auto;
+    background-color: #faf0f6;
+    padding: 0 0 50px;
+}
+
+.header{
+    height: auto;
+    padding: 50px 0 40px;
+}
+
+.header h2{
+    font-family: 'Niconne', cursive;
+    margin-top: 20px;
+    font-size: 38px;
+}
+
+.header .btns{
+    font-family: 'Rokkitt', serif;
+}
+
+.header img{
+    height: auto;
+    justify-self: end;
+}

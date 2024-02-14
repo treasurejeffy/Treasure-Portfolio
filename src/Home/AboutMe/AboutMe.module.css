@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap');
+
+.container{
+    padding: 80px 10px 40px;
+}
+
+.treasureImg{
+    padding: 40px 20px 0;
+    height: auto;
+}
+
+.headText h2{
+    font-family: 'Rokkitt', serif;    
+}
+
+.headText article{
+    font-family: 'Rokkitt', serif;    
+    letter-spacing: 0.5px;
+}
+
+.headText p{
+   font-size: small;
+   letter-spacing: 0.7px;
+}
