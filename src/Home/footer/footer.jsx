@@ -18,10 +18,10 @@ export default function Footer() {
                     </Col>
                     <Col className="pt-4">
                         <div >
-                            <a href="https://web.facebook.com/treasure.japheth.14" className="px-2"><Facebook/></a>
-                            <a href="https://twitter.com/JaphethTreasure" className="px-2"><Twitter/></a>
-                            <a href="https://github.com/treasurejeffy" className="px-2"><Github/></a>
-                            <a href="https://www.linkedin.com/in/treasure-japheth-a1a1632b4/" className="px-2"><Linkedin/></a>
+                            <a href="https://web.facebook.com/treasure.japheth.14" className="px-2 text-primary"><Facebook/></a>
+                            <a href="https://twitter.com/JaphethTreasure" className="px-2 text-primary"><Twitter/></a>
+                            <a href="https://github.com/treasurejeffy" className="px-2 text-primary"><Github/></a>
+                            <a href="https://www.linkedin.com/in/treasure-japheth-a1a1632b4/" className="px-2 text-primary"><Linkedin/></a>
                         </div>  
                     </Col>                    
                 </Row>
