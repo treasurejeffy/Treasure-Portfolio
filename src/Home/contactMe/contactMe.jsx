@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col, Button, Form } from "react-bootstrap";
-import { Arrow90degDown, Facebook, Twitter, Github, Envelope, Phone, Linkedin, Telephone } from "react-bootstrap-icons";
+import { Arrow90degDown, Facebook, Twitter, Github, Envelope, Phone, Linkedin, Telephone, ArrowLeft } from "react-bootstrap-icons";
 import Css from '../contactMe/contactMe.module.css';
 import {db} from  '../Config/firebase';
 import {getDocs , collection, addDoc} from 'firebase/firestore';
@@ -72,7 +72,7 @@ export default function ContactMe() {
     }
     
     return(
-        <section>
+        <section className="mt-5">
             <Container>
                 <div className={`${Css.contactHeader}  text-center mb-4`}>
                     <h2 ><span className="text-primary">*</span>Contact Me</h2>
@@ -123,6 +123,9 @@ export default function ContactMe() {
                         </div>
                     </Col>
                 </Row>
+                <div className={`${Css.backToHome} d-flex justify-content-end my-4 text-dark`} >
+                    <a href="/"><ArrowLeft className="text-primary"/> Back to home</a>
+                </div>
             </Container>
             <ToastContainer
                     position="top-right"

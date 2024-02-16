@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col, Button} from "react-bootstrap";
 import css from '../AboutMe/AboutMe.module.css'
 import treasure from '../AboutMe/treasure.png';
-import {  Heart, Check, PersonBadge } from 'react-bootstrap-icons';
+import {  Heart, Check, PersonBadge, ArrowLeft } from 'react-bootstrap-icons';
 
 export default function AboutMe() {
     
@@ -27,6 +27,9 @@ export default function AboutMe() {
                                 <p className='fw-lighter pt-2'> My approach to web development is mainly for users. I believe in creating websites and applications that not only look good but also provide a seamless and enjoyable experience. I take pride in delivering clean and efficient code.</p>
                             </Col>
                         </Row>
+                        <div className='d-flex justify-content-end'>
+                            <a href="/" className='fs-5'> <ArrowLeft className='text-success'/> Back to Home</a>
+                            </div>
                     </Col>
                 </Row>
             </Container>
