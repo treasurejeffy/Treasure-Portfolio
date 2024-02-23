@@ -85,7 +85,7 @@ export default function Experience_Performance() {
                     </Col>                  
                 </Row>
                 <div  className='d-flex justify-content-end my-4'>
-                    <a href="https://github.com/treasurejeffy" className={`${Css.Article} fs-5`}>see more <ArrowRight className='fs-6'/></a>    
+                    <a href="https://github.com/treasurejeffy" className={`${Css.Article}`}>see more <ArrowRight/></a>    
                 </div>
             </Container>
         </section>

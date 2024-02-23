@@ -16,11 +16,12 @@
 
 
 .contactMesocial{
-    padding: 51px 0 53px;
+    padding: 51px 0 40px;
 }
 
 .contactMesocial h5{
     font-family: 'Rokkitt', serif;
+    margin: 40px 0 0;
 }
 
 .notify{

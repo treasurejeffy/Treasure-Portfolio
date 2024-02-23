@@ -28,7 +28,7 @@ export default function AboutMe() {
                             </Col>
                         </Row>
                         <div className='d-flex justify-content-end'>
-                            <a href="/" className='fs-5'> <ArrowLeft className='text-success'/> Back to Home</a>
+                            <a href="/"> <ArrowLeft className='text-success'/> Back to Home</a>
                             </div>
                     </Col>
                 </Row>

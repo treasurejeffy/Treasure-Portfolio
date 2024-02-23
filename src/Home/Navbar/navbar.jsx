@@ -8,9 +8,9 @@ import { Link } from "react-router-dom";
 
 export default function Navbars() {
     return(      
-        <Navbar expand="lg" sticky="top"   className="bg-body-tertiary">
+        <Navbar expand="lg" sticky="top"   className="bg-light">
             <Container>
-                <Navbar.Brand href="#home"><img src={logo} alt="name"  height={40}/></Navbar.Brand>
+                <Navbar.Brand href="/"><img src={logo} alt="name"  height={40}/></Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav"  className="border-0 shadow-none"/>
                 <Navbar.Collapse id="basic-navbar-nav" className="d-lg-flex justify-content-end " >
                     <Nav className={`${css.navs} `}>

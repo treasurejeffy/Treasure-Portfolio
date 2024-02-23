@@ -7,7 +7,8 @@ import {db} from  '../Config/firebase';
 import {getDocs , collection, addDoc} from 'firebase/firestore';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
+import emailjs from '@emailjs/browser';
 
 export default function ContactMe() {
     const [cltName, setCltName] = useState('');
@@ -16,9 +17,15 @@ export default function ContactMe() {
     const [cltComment, setCltComment] = useState('');
     let [saveData, setSaveData] = useState([]);
     let notify;
-
     const [currentDateTime, setCurrentDateTime] = useState('');
-
+    let save = [
+    {
+    Name: cltName,
+    email: cltEmail,
+    phoneNo: cltNumber,
+    comments: cltComment
+    }
+    ]
     useEffect(() => {
       // Function to get the current date and time
       const getCurrentDateTime = () => {
@@ -38,9 +45,10 @@ export default function ContactMe() {
       return () => clearInterval(interval);
     }, []);
     const [clientList,setClientList ]= useState ([])
-
     const getClientsCollectionRef = collection(db,'clientsData')
 
+    const form = useRef();
+    
     const getClientsList = async() => {
         try{
             const data  = await getDocs(getClientsCollectionRef);
@@ -56,7 +64,11 @@ export default function ContactMe() {
 
     useEffect (()=>{      
         getClientsList();
+        setSaveData([])
     },[])
+
+
+
 
     let thanks= 'Thanks you I will get back to you through the Email!'
 
@@ -64,12 +76,19 @@ export default function ContactMe() {
         e.preventDefault();
         notify = toast(<b className={`${Css.notify} text-success`}>{thanks}</b>) ;
         try {
-            await addDoc(getClientsCollectionRef, {Name: cltName, email: cltEmail, phoneNo: cltNumber, comments: cltComment});    
-            getClientsList()   
+            await addDoc(getClientsCollectionRef, {Name: cltName, email: cltEmail, phoneNo: cltNumber, comments: cltComment});            
+            getClientsList();
+            emailjs
+            .sendForm('service_ngxlbie', 'template_t75y0se', e.target, {
+              publicKey: 'B47fSFKE0sVRzuySp',
+            })
+            setSaveData(...saveData,save)
         } catch (error) {
             console.error(error)
         }
     }
+
+    
     
     return(
         <section className="mt-5">
@@ -81,7 +100,7 @@ export default function ContactMe() {
                 <Row className=" align-items-center" lg={2} sm={1} xs={1} md={1} >                   
                     <Col> 
                         <div className={`${Css.contactForm}`}>                  
-                            <Form className="bg-light py-5 px-4 mb-3 border rounded"  onSubmit={handleSubmit}>
+                            <Form className="bg-light py-5 px-4 mb-3 border rounded" ref={form}  onSubmit={handleSubmit}>
                                 <h5 className="text-center mb-4"> For inquries pls fill this form!</h5>
                                 <Form.Label>Full Name:</Form.Label>
                                 <Form.Control type="text" placeholder="Enter your full Name " className="mb-4" required onChange={(e) => setCltName(e.target.value)}/>
@@ -91,7 +110,7 @@ export default function ContactMe() {
                                 <Form.Control type="number" placeholder="Enter your phone number" required onChange={(e) => setCltNumber(e.target.valueAsNumber)}/>
                                 <Form.Group controlId="exampleForm.ControlTextarea1" className="mt-3">
                                     <Form.Label>Explain:</Form.Label>
-                                    <Form.Control as="textarea" rows={3} onChange={(e) => setCltComment(e.target.value)} placeholder="Explain, how I can help pls."/>
+                                    <Form.Control as="textarea" rows={4} onChange={(e) => setCltComment(e.target.value)} placeholder="Explain, how I can help pls."/>
                                 </Form.Group>
                                 <div className="d-flex justify-content-center">
                                     <Button type="submit" className="mt-5 d btn btn-primary px-5 py-2 fs-5"><b> Submit</b></Button>
@@ -101,7 +120,7 @@ export default function ContactMe() {
                     </Col>
                     <Col  className=" text-center">
                         <div className={`${Css.contactMesocial} rounded border bg-light`}>
-                            <h5 className="mb-5">Get more closer to me!</h5>
+                            <h5 className="mb-5 ">Get more closer to me!</h5>
                             <div>
                                 <a href="https://web.facebook.com/treasure.japheth.14"><Button className="px-5 py-3"><Facebook className="mx-2 mb-1"/><b>facebook</b></Button></a>
                             </div>
