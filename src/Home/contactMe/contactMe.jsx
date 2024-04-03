@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col, Button, Form } from "react-bootstrap";
-import { Arrow90degDown, Facebook, Twitter, Github, Envelope, Phone, Linkedin, Telephone, ArrowLeft } from "react-bootstrap-icons";
+import { Arrow90degDown, Facebook, Twitter, Github, Envelope, Phone, Linkedin, Telephone, ArrowLeft, ClockFill } from "react-bootstrap-icons";
 import Css from '../contactMe/contactMe.module.css';
 import {db} from  '../Config/firebase';
 import {getDocs , collection, addDoc} from 'firebase/firestore';
@@ -95,7 +95,7 @@ export default function ContactMe() {
             <Container>
                 <div className={`${Css.contactHeader}  text-center mb-4`}>
                     <h2 ><span className="text-primary">*</span>Contact Me</h2>
-                    <p>Thank you for visiting my portfolio! If you have any inquiries, collaboration opportunities, or just want to say hello, feel free to reach out to me using any of the following methods: [But remember this is the time <span className="text-danger">{currentDateTime}</span> for you to put your shop, idea & institution into technology.]</p>
+                    <p>Thank you for visiting my portfolio! If you have any inquiries, collaboration opportunities, or just want to say hello, feel free to reach out to me using any of the following methods: [But remember this is the time <ClockFill className="fs-4 fw-bold text-primary"/> <span className="text-danger">{currentDateTime}</span> for you to put your shop, idea & institution into technology.]</p>
                 </div>
                 <Row className=" align-items-center" lg={2} sm={1} xs={1} md={1} >                   
                     <Col> 
