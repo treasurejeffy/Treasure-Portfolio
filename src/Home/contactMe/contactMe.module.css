@@ -10,6 +10,10 @@
     font-family: 'Rokkitt', serif;
 }
 
+.contactHeader p span{
+    cursor: pointer;
+}
+
 .contactForm{
     font-family: 'Rokkitt', serif;
 }

@@ -16,15 +16,17 @@
 
 .headText article{
     font-family: 'Rokkitt', serif;    
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
 }
 
 .headText p{
-   font-size: small;
-   letter-spacing: 0.7px;
+    font-family: 'Rokkitt', serif; 
+   letter-spacing: 0.3px;
+   font-size: 16px;
+   font-weight: 350;
 }
 
 a{
-    color: #833d36;
+    color: #368350;
     font-family:  'Rokkitt', serif;
 }
