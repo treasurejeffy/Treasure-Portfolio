@@ -90,7 +90,7 @@ export default function ContactMe() {
                     console.log('FAILED...', error);
                 }
             );
-            toast.success(thanks);
+            toast.success(<b className="text-semibold text-success">{thanks}</b> );
             setSaveData(...saveData,formData)
         } catch (error) {
             console.error(error)
