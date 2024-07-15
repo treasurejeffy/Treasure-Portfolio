@@ -55,7 +55,7 @@ export default function Experience_Performance() {
                             <Row lg={3} md={3} sm={1} xs={1}>
                                 <div>
                                     <main className='card mb-3'>
-                                        <img src={foodMarket} alt="market" className='img-fluid mb-4'/>
+                                        <a href="https://sure-market.netlify.app"><img src={foodMarket} alt="market" className='img-fluid mb-4'/></a>
                                         <article className='px-3'>
                                             A sample of an e-commerce website that deal with friuts and vegetables.It is created with javascript framework (React) & bootstrap.
                                         </article>
@@ -64,7 +64,7 @@ export default function Experience_Performance() {
                                 </div>
                                 <div>
                                     <main className='card mb-3'>
-                                        <img src={form} alt="market" className='img-fluid mb-4'/>
+                                        <a href="https://lms-continous-assessment-form.netlify.app/"><img src={form} alt="market" className='img-fluid mb-4'/></a> 
                                         <article className='px-3'>
                                             This is a sample of a form for  student assessment submission .It is created with javascript framework (React) & bootstrap.
                                         </article>
@@ -73,7 +73,7 @@ export default function Experience_Performance() {
                                 </div>
                                 <div>
                                     <main className='card mb-3'>
-                                        <img src={Movie} alt="market" className='img-fluid mb-4' height={'200px'}/>
+                                        <a href="https://movie-site-1fbd6d.netlify.app/"><img src={Movie} alt="market" className='img-fluid mb-4' height={'200px'}/></a> 
                                         <article className='px-3'>
                                             This is a sample of a Movie website that you can search for movies.It is created with javascript framework (React) & bootstrap.
                                         </article>
