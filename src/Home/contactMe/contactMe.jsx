@@ -81,7 +81,7 @@ export default function ContactMe() {
                 'service_ngxlbie',  // Replace with your service ID
                 'template_t75y0se',  // Replace with your template ID
                 e.target,         // The form element
-                'B47fSFKE0sVRzuySp'  // Replace with your public key
+                'AK3AlCoxqm-QRicYs'  // Replace with your public key
             ).then(
                 (response) => {
                     console.log('SUCCESS!', response.status, response.text);
